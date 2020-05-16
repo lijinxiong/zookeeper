@@ -933,10 +933,12 @@ public class RemoveWatchesTest extends ClientBase {
             public int lastrc;
 
             /* Pretend that any watcher exists */
+            @Override
             void containsWatcher(String path, Watcher watcher, WatcherType watcherType) throws NoWatcherException {
             }
 
             /* save the return error code by the server */
+            @Override
             protected boolean removeWatches(
                 Map<String, Set<Watcher>> pathVsWatcher,
                 Watcher watcher,

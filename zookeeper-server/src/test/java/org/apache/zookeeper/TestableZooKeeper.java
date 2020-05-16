@@ -66,6 +66,7 @@ public class TestableZooKeeper extends ZooKeeperAdmin {
 
     }
 
+    @Override
     protected ClientCnxn createConnection(
         String chrootPath,
         HostProvider hostProvider,

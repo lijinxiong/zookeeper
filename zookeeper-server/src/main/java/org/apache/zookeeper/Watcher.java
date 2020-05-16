@@ -29,7 +29,7 @@ import org.apache.yetus.audience.InterfaceAudience;
  *
  */
 @InterfaceAudience.Public
-public interface Watcher {
+public interface  Watcher {
 
     /**
      * This interface defines the possible states an Event may represent

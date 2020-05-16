@@ -257,6 +257,7 @@ public class ClientCnxn {
     }
 
     /**
+     * 该类使我们可以传递请求头和相关记录。
      * This class allows us to pass the headers and the relevant records around.
      */
     static class Packet {
@@ -736,8 +737,9 @@ public class ClientCnxn {
         if (p.watchRegistration != null) {
             p.watchRegistration.register(err);
         }
-        // Add all the removed watch events to the event queue, so that the
-        // clients will be notified with 'Data/Child WatchRemoved' event type.
+        // Add all the removed watch events to the event queue,
+        // so that the clients will be notified with 'Data/Child WatchRemoved' event type.
+        // 将所有已删除的监视事件添加到事件队列中，以便客户端将收到“数据节点/儿童 WatchRemoved”事件类型的通知。
         if (p.watchDeregistration != null) {
             Map<EventType, Set<Watcher>> materializedWatchers = null;
             try {
