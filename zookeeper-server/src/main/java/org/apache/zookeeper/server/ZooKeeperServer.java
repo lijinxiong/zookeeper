@@ -1899,6 +1899,7 @@ public class ZooKeeperServer implements SessionExpirer, ServerStats.Provider {
 
     /**
      * Grant or deny authorization to an operation on a node as a function of:
+     * 授予或拒绝 对节点上的操作
      * @param cnxn :    the server connection
      * @param acl :     set of ACLs for the node
      * @param perm :    the permission that the client is requesting
